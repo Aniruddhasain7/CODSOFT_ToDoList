@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".TaskEditor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Task Editor"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20sdp" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:inputType="text"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_21sdp"
+        style="@style/edit_text" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description (Optional)"
+        android:inputType="textMultiLine"
+        android:autofillHints="description"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        style="@style/edit_text" />
+
+    <TextView
+        android:id="@+id/due_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Due Date"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        style="@style/edit_text" />
+
+    <CheckBox
+        android:id="@+id/priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Priority"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:buttonTint="@color/black"
+        style="@style/edit_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:background="@drawable/edit_text"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <RadioGroup
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                style="@style/radio_button"
+                android:id="@+id/active"
+                android:text="Active"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:padding="8dp" />
+
+            <RadioButton
+                style="@style/radio_button"
+                android:id="@+id/done"
+                android:text="Done"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:padding="8dp" />
+
+            <RadioButton
+                style="@style/radio_button"
+                android:id="@+id/delayed"
+                android:text="Delayed"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:padding="8dp" />
+
+            <RadioButton
+                style="@style/radio_button"
+                android:id="@+id/none"
+                android:text="None"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:padding="8dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        style="@style/button"
+        android:layout_width="@dimen/_163sdp"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="@dimen/_163sdp"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:visibility="gone" />
+</LinearLayout>
